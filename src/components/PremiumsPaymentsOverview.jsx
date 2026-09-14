@@ -292,5 +292,5 @@ const mapDispatchToProps = dispatch => {
     }, dispatch);
 };
 
-export { StyledPremiumsPaymentsOverview };
+export { PremiumsPaymentsOverview, StyledPremiumsPaymentsOverview };
 export default withModulesManager(injectIntl(connect(mapStateToProps, mapDispatchToProps)(PremiumsPaymentsOverview)));
