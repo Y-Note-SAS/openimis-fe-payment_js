@@ -42,7 +42,8 @@ const DEFAULT_CONFIG = {
   "insuree.MainMenu": (modulesManager) => [
     {
       route: ROUTE_PAYMENTS,
-      hide: modulesManager.getConf("fe-policy", "enableInvoicePaymentMode", false),
+      // Invoice payment mode == contribution plans mode (fe-policy.productsOrContributions).
+      hide: modulesManager.getConf("fe-policy", "productsOrContributions", "products") === "contributions",
     },
   ],
   "invoice.MainMenu": [
